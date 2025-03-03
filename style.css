@@ -1,0 +1,397 @@
+/* Consistent Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Colors */
+:root {
+    --p-blue: #91A8CD;
+    --p-green: #053225;
+    --teal: #48A9A6;
+    --red: #A72608;
+    --beige: #C4A484;
+}
+
+/* Typography */
+@font-face {
+    font-family: 'Chalk';
+    src: url('fonts/Chalk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Italic';
+    src: url('fonts/Roboto-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+h1 {
+    font-size: 75px;
+    font-family: Chalk;
+    text-align: left;
+    color: var(--p-green)
+}
+h2 {
+    font-size: 30px;
+    font-family: Chalk;
+    text-align: left;
+    color: var(--p-green)
+}
+h3 {
+    font-size: 24px;
+    font-family: Roboto;
+    text-align: left;
+    color: var(--p-green)
+}
+h4 {
+    font-size: 60px;
+    font-family: Chalk;
+    text-align: left;
+    margin-bottom: 20px;
+    color: white;
+}
+p {
+    font-size: 18px;
+    font-family: Roboto;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    max-width: 700px;
+    color:#ffffff;
+}
+
+/* Video Header */
+.video-container {
+    position: fixed; /* Makes video stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* Makes video stay in the background */
+    transition: opacity 0.5s ease-in-out; /* Fades out on scroll */
+}
+
+/* JavaScript Fade Effect */
+.video-hidden {
+    opacity: 0; /* Hides video when scrolling */
+    pointer-events: none; /* Prevents interaction */
+}
+
+/* Headline Container */
+.headline-container {
+    position: relative;
+    background-color: white;
+    margin-top: -50px; /* Adjusts the position of the headline over video */
+    margin-bottom: -80px; /* Adjuts the position of the first section */
+    margin-left: 100px;
+    z-index: 2;
+    width: 724px;
+    height: 150px;
+    flex-shrink: 0;
+    padding: 30px;
+    border-radius: 30px 30px 30px 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Lede Section */
+.lede-section {
+    background-color: var(--p-green);
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding-top: 50px;
+    width: 100%;
+    gap: 75px;
+}
+.lede-section img {
+    max-width: 466px;
+    width: auto;
+    max-height: 472px;
+    height: auto;
+    flex-shrink: 1;
+    margin-left: 100px;
+}
+.lede-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 472px;
+    height: auto;
+    flex-shrink: 1;
+    margin-right: 100px;
+    padding: inherit; /* Inherit padding from .lede-section */
+}
+
+/* The Mission's Legacy Section */
+.mission-section {
+    background-color: var(--p-green);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 25px;
+    clear: both;
+}
+.mission-title { /* NO LONGER NEEDED! */
+    background-color: var(--p-blue);
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 30px 30px 0px 0px;
+    max-width: 720px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 25px;
+    flex-shrink: 1;
+}
+.mission-text {
+    max-width: 720px;
+    margin-top: 50px;
+    overflow: visible !important;
+    flex-shrink: 1;
+}
+.mission-section img {
+    max-width: 1040px;
+    width: auto;
+    max-height: 389px;
+    height: auto;
+    flex-shrink: 1;
+}
+
+/* SF Voices for Gaza Section */
+.gaza-section-1 {
+    background-color: var(--p-green);
+    display: flex;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+.gaza-title {
+    background-color: var(--p-green);
+    margin-left: 100px;
+}
+.gaza-section-2 {
+    background-color: var(--p-green);
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    grid-template-rows: auto auto; /* Two rows, auto-sized */
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    gap: 30px;
+    row-gap: 5px;
+}
+.gaza-section-2 img {
+    max-width: 466px;
+    width: auto;
+    max-height: 502px;
+    height: auto;
+    flex-shrink: 1;
+    margin-left: 100px;
+}
+.gaza-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 510px;
+    width: auto;
+    max-height: 472px;
+    height: auto;
+    flex-shrink: 0;
+    margin-right: 100px;
+    padding: inherit; /* Inherit padding from .gaza-section */
+}
+
+/* Sanitized Expression Section */
+.sanitized-section {
+    background-color: var(--p-green);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+    clear: both;
+}
+.sanitized-title { /* NO LONGER NEEDED! */
+    background-color: var(--p-blue);
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 30px 0px 30px 30px;
+    max-width: 720px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 25px;
+    flex-shrink: 1;
+}
+.sanitized-text {
+    max-width: 720px;
+    margin-top: 50px;
+    overflow: visible !important;
+    flex-shrink: 1;
+}
+
+/* Hands of Resistance Section */
+.resistance-section { /* NO LONGER NEEDED! */
+    background-color: var(--p-green);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    clear: both;
+}
+.resistance-title {
+    background-color: var(--p-blue);
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 30px 30px 30px 0px;
+    max-width: 720px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-shrink: 1;
+}
+.resistance-text {
+    max-width: 720px;
+    margin-top: 50px;
+    overflow: visible !important;
+    flex-shrink: 1;
+}
+
+/* Body */
+.content-wrapper {
+    padding-top: 80vh; /* Space for video to be visible initially */
+    margin: 0;
+} 
+.image-container {
+margin: 30px 0;
+text-align: center;
+}
+.image-container img {
+    max-width: 100%;
+    height: 50vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Background Image Container */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/MuralPics-14.jpg); /* Replace with your actual image */
+    background-size: cover; /* Ensures it covers the whole viewport */
+    background-position: center;
+    background-attachment: fixed; /* This keeps it in place */
+    z-index: -1; /* Push it to the back */
+}
+
+/* Main Container */
+.parallax-images {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-image: url(images/MuralPics-14.jpg);
+    padding-bottom: 100vh; /* Space for content section */
+}
+
+/* Scrolling Images Container */
+.scroll-image-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+    padding: 100vh 20px 150px; /* First 100vh to show just background */
+}
+
+/* Image And Caption Container */
+.image-and-caption-v, 
+.image-and-caption-h {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn .5s forwards;
+    animation-play-state: paused;
+}
+
+/* Vertical Image Styling */
+.scroll-image-vertical {
+    width: 60%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Horizontal Image Styling */
+.scroll-image-horizontal {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Caption Styling */
+cite {
+    margin-top: 10px;
+    font-style: italic;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+    max-width: 90%;
+    font-size: 14px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.footer-section {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.footer-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
