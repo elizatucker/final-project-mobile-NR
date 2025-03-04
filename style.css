@@ -75,21 +75,63 @@ p {
 
 /* Video Header */
 .video-container {
-    position: fixed; /* Makes video stay in place */
+    position: relative; /* Makes video stay in place */
+    width: cover;
+    height: 60vh;
+}
+
+#video {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     z-index: -1; /* Makes video stay in the background */
-    transition: opacity 0.5s ease-in-out; /* Fades out on scroll */
+}
+
+#scrolly {
+    position: relative;
+    background-color: var(p-green);
+    padding: 0;
+}
+
+.sticky-thing-photo1 {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    background: url(images/MuralPics-04.jpg);
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
+    top: 0;
+    height: 110vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+article {
+    position: relative;
+    padding: 0;
+    max-width: 20rem;
+    margin: 0 auto;
+}
+
+.step {
+    margin: 0 auto 2rem auto; /* which pne cpntrols the after margin */
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.607);
 }
 
 /* JavaScript Fade Effect */
-.video-hidden {
+/*.video-hidden {
     opacity: 0; /* Hides video when scrolling */
-    pointer-events: none; /* Prevents interaction */
-}
+    /* pointer-events: none; /* Prevents interaction */
+/* } */
 
 /* Headline Container */
 .headline-container {
@@ -117,6 +159,7 @@ p {
     width: 100%;
     gap: 75px;
 }
+/* lede image */
 .lede-section img {
     max-width: 466px;
     width: auto;
@@ -125,6 +168,7 @@ p {
     flex-shrink: 1;
     margin-left: 100px;
 }
+/*lede text */
 .lede-text {
     display: flex;
     flex-direction: column;
@@ -148,7 +192,7 @@ p {
     padding-top: 25px;
     clear: both;
 }
-.mission-title { /* NO LONGER NEEDED! */
+/*.mission-title { /* NO LONGER NEEDED! 
     background-color: var(--p-blue);
     display: inline-block;
     padding: 15px 25px;
@@ -159,7 +203,8 @@ p {
     padding-right: 50px;
     margin-top: 25px;
     flex-shrink: 1;
-}
+} */
+
 .mission-text {
     max-width: 720px;
     margin-top: 50px;
@@ -215,7 +260,49 @@ p {
     margin-right: 100px;
     padding: inherit; /* Inherit padding from .gaza-section */
 }
+.sticky-thing-photo2 {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    background-color: #053225;
+    background: url(images/MuralPics-14.jpg);
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
+    top: .5vh;
+    height: 110vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
+.step1, .step2, .step3 {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.scroll-image2 {
+    width: 90%; /* Increased image size */
+    max-width: 1200px; /* Maximum width */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    opacity: 1; /* Start with 0 opacity */
+    transition: opacity 1s ease-in-out; /* Smooth fade transition */
+}
+
+.scroll-image {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 /* Sanitized Expression Section */
 .sanitized-section {
     background-color: var(--p-green);
@@ -228,7 +315,7 @@ p {
     padding-top: 50px;
     clear: both;
 }
-.sanitized-title { /* NO LONGER NEEDED! */
+/* .sanitized-title { /* NO LONGER NEEDED!
     background-color: var(--p-blue);
     display: inline-block;
     padding: 15px 25px;
@@ -239,7 +326,7 @@ p {
     padding-right: 50px;
     margin-top: 25px;
     flex-shrink: 1;
-}
+} */
 .sanitized-text {
     max-width: 720px;
     margin-top: 50px;
@@ -248,7 +335,7 @@ p {
 }
 
 /* Hands of Resistance Section */
-.resistance-section { /* NO LONGER NEEDED! */
+.resistance-section {
     background-color: var(--p-green);
     display: flex;
     flex-direction: column;
@@ -298,11 +385,11 @@ text-align: center;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url(images/MuralPics-14.jpg); /* Replace with your actual image */
+    background-image: url(images/MuralPics-14.jpg);
     background-size: cover; /* Ensures it covers the whole viewport */
     background-position: center;
     background-attachment: fixed; /* This keeps it in place */
-    z-index: -1; /* Push it to the back */
+    z-index: -2; /* Push it to the back */
 }
 
 /* Main Container */
@@ -332,7 +419,7 @@ text-align: center;
     align-items: center;
     max-width: 800px;
     width: 100%;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(50px);
     animation: fadeIn .5s forwards;
     animation-play-state: paused;

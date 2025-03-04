@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>These Walls Speak</title>
+    <meta name="description" content="Scrollama: Sticky Overlay Example" />
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
 <!--VIDEO BACKGROUND-->
-<video class= video-container src="videos/Mural Walk.mp4" autoplay loop muted></video> 
+<section class= "video-container">
+    <video id="video" autoplay muted loop>
+        <source src="videos/Mural Walk.mp4" type="video/mp4">
+    </video>
+</section>
 
     <!--ARTICLE TITLE BOX-->
       <div class="content-wrapper">
@@ -46,7 +53,7 @@
     </div>
 
     <!--THE MISSIONS LEGACY-->
-    <div class="mission-section">
+    <section class="mission-section">
         <div class="mission-text">
             <h4>THE MISSION'S LEGACY</h4>
             <p>One of the hallmark institutions of public-facing arts of San Francisco is 
@@ -65,27 +72,27 @@
                 to be forgotten.
             </p>
         </div>
-        <div class="mission-section img">
-            <img src="images/MuralPics-04-RS.jpg" 
-                    alt="Juana ALicias Mural 'La Llorona's Sacred Waters'">
-        </div>
-        <div class="mission-text">
-            <p>“I’ve been doing this for, I don’t know, 50 years or more. And, unfortunately, 
-                these issues don’t seem to go away,” said Juana Alicia, a long-time artist and 
-                activist within the Chicano Art Movement. Her most famous pieces include: Las 
-                Lechugueras, Ceasefire/Alto Al Fuego and MAESTRAPEACE.
-            </p>
-            <p>Alicia, whose murals can be seen in California, Pennsylvania, Nicaragua and Mexico 
-                – where she is now located – often draws inspiration from current events. By working 
-                through intersectional lenses such as decolonization, feminism and indigenous identity, 
-                Alicia sees her art as a way to confront issues within the communities that surround her.
-            </p>
-            <p>“We have to spend our energy carefully,” said Alicia. “For me, art – my artwork – is 
-                the way that I can deal with the political repression that we’ve suffered throughout 
-                the history of the United States – against women, against people of color, against 
-                immigrants, against non-binary people, against gay people, against disabled people.”
-            </p>
-        </div>
+        </section>
+        <section id="scrolly">
+            <div class="sticky-thing-photo1">
+                <p>0</p>
+            </div>
+
+            <article>
+                <div class="step" data-step="">
+                  <p>“I’ve been doing this for, I don’t know, 50 years or more. And, unfortunately, these issues don’t seem to go away,” said Juana Alicia, a long-time artist and activist within the Chicano Art Movement. Her most famous pieces include: Las Lechugueras, Ceasefire/Alto Al Fuego and MAESTRAPEACE.
+                    .</p>
+                </div>
+                <div class="step" data-step="">
+                  <p>Alicia, whose murals can be seen in California, Pennsylvania, Nicaragua and Mexico – where she is now located – often draws inspiration from current events. By working through intersectional lenses such as decolonization, feminism and indigenous identity, Alicia sees her art as a way to confront issues within the communities that surround her.
+                  </p>
+                </div>
+                <div class="step" data-step="">
+                  <p>“We have to spend our energy carefully,” said Alicia. “For me, art – my artwork – is the way that I can deal with the political repression that we’ve suffered throughout the history of the United States – against women, against people of color, against immigrants, against non-binary people, against gay people, against disabled people.”</p>
+                </div>
+                </div>
+              </article>
+            </section>
     </div>
 
     <!--SF VOICES FOR GAZA-->
@@ -143,33 +150,33 @@
 </div>
  
 <!--BACKGROUND IMAGE-->
-<div class="background"></div>
+<section id="scrolly">
+    <div class = "sticky-thing-photo2">
+        <p>1</p>
+    </div>
 
+    <article>
+        <div class="step1" data-step="">
+          <img class="scroll-image2" src="images/MuralPics-15.jpg" 
+               alt="Chris Gazaleh's Mural “Heart Shaped Rocks” in Clarion Alley">
+               <cite>Chris Gazaleh's Mural “Heart Shaped Rocks”.</cite>
+        </div>
+        <div class="step2" data-step="">
+          <img class="scroll-image2" src="images/MuralPics-10.jpg" 
+               alt="Mural in Clarion Alley titled 'Justice'">
+               <cite>"Justice" Mural in Clarion Alley</cite>
+        </div>
+        <div class="step3" data-step="">
+          <img class="scroll-image2" src="images/MuralPics-12.jpg" 
+               alt="a weathered mural by Juana Alicia titled 'Not in Our Name'">
+               <cite>Juana Alicia's "Not in Our Name".</cite>
+        </div>
+    </div>
+    </article>
+</section>
 
 <!--SCROLLY ALLEY BREAK-->
-<div class="scroll-image-div">
-    <figure class="image-and-caption-v">
-        <img class="scroll-image-vertical" 
-                src="images/MuralPics-15.jpg" 
-                alt="Chris Gazaleh's Mural “Heart Shaped Rocks” in Clarion Alley">
-        <cite>Chris Gazaleh's Mural “Heart Shaped Rocks”.</cite>
-    </figure>
-    
-    <figure class="image-and-caption-h">
-        <img class="scroll-image-horizontal" 
-                src="images/MuralPics-10.jpg" 
-                alt="Mural in Clarion Alley titled 'Justice'">
-        <cite>"Justice" Mural in Clarion Alley</cite>
-    </figure>
-    
-    <figure class="image-and-caption-v">
-        <img class="scroll-image-vertical" 
-                src="images/MuralPics-12.jpg" 
-                alt="a weathered mural by Juana Alicia titled 'Not in Our Name'">
-        <cite>Juana Alicia's "Not in Our Name".</cite>
-    </figure>
-</div>
-</figure>
+
 
 <!--SANITIZED EXPRESSION-->
 <div class="sanitized-section">
@@ -223,50 +230,6 @@
     <img src="images/MuralPics-11.jpg" 
         alt="Tribute to Archbishop Oscar Romero mural in the Mission District">
 </div>
-
-<script>
-    // Intersection Observer to trigger animations when scrolling
-    document.addEventListener('DOMContentLoaded', () => {
-        const images = document.querySelectorAll('.image-and-caption-v, .image-and-caption-h');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            root: null,
-            threshold: 0.2,
-            rootMargin: '-100px'
-        });
-        
-        images.forEach(image => {
-            observer.observe(image);
-        });
-    });
-    window.addEventListener('scroll', () => {
-    const video = document.querySelector('.video-container');
-    const background = document.querySelector('.background');
-
-    if (window.scrollY > 150) { // Adjust scroll threshold for smooth transition
-        video.style.opacity = "0"; 
-        video.style.pointerEvents = "none";
-
-        // Wait for the fade-out to complete before removing video
-        setTimeout(() => {
-            video.style.display = "none"; 
-        }, 500); // Matches the CSS transition time
-
-        background.style.opacity = "1"; 
-    } else {
-        video.style.opacity = "1"; 
-        video.style.pointerEvents = "auto";
-        video.style.display = "block"; // Ensure video reappears when scrolling up
-        background.style.opacity = "0"; 
-    }
-    });
-</script>
+<script src="main.js"></script>
 </body>
 </html>
