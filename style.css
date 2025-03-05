@@ -10,6 +10,7 @@ body, html {
     overflow-x: hidden;
 }
 
+
 /* Colors */
 :root {
     --p-blue: #91A8CD;
@@ -77,9 +78,8 @@ p {
 .video-container {
     position: relative; /* Makes video stay in place */
     width: cover;
-    height: 60vh;
+    height: 80vh;
 }
-
 #video {
     position: fixed;
     top: 0;
@@ -89,49 +89,6 @@ p {
     object-fit: cover;
     z-index: -1; /* Makes video stay in the background */
 }
-
-#scrolly {
-    position: relative;
-    background-color: var(p-green);
-    padding: 0;
-}
-
-.sticky-thing-photo1 {
-    position: -webkit-sticky;
-    position: sticky;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    background: url(images/MuralPics-04.jpg);
-    background-size: cover;
-    background-position: center center;
-    z-index: 0;
-    top: 0;
-    height: 110vh;
-    /* Center everything inside */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-article {
-    position: relative;
-    padding: 0;
-    max-width: 20rem;
-    margin: 0 auto;
-}
-
-.step {
-    margin: 0 auto 2rem auto; /* which pne cpntrols the after margin */
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.607);
-}
-
-/* JavaScript Fade Effect */
-/*.video-hidden {
-    opacity: 0; /* Hides video when scrolling */
-    /* pointer-events: none; /* Prevents interaction */
-/* } */
 
 /* Headline Container */
 .headline-container {
@@ -159,7 +116,6 @@ article {
     width: 100%;
     gap: 75px;
 }
-/* lede image */
 .lede-section img {
     max-width: 466px;
     width: auto;
@@ -168,7 +124,6 @@ article {
     flex-shrink: 1;
     margin-left: 100px;
 }
-/*lede text */
 .lede-text {
     display: flex;
     flex-direction: column;
@@ -192,19 +147,6 @@ article {
     padding-top: 25px;
     clear: both;
 }
-/*.mission-title { /* NO LONGER NEEDED! 
-    background-color: var(--p-blue);
-    display: inline-block;
-    padding: 15px 25px;
-    border-radius: 30px 30px 0px 0px;
-    max-width: 720px;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 25px;
-    flex-shrink: 1;
-} */
-
 .mission-text {
     max-width: 720px;
     margin-top: 50px;
@@ -217,6 +159,41 @@ article {
     max-height: 389px;
     height: auto;
     flex-shrink: 1;
+}
+
+/* Juana Alicia Scrolly section */
+#scrolly {
+    position: relative;
+    background-color: var(p-green);
+    padding: 0;
+}
+.sticky-thing-photo1 {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    background: url(images/MuralPics-04.jpg);
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
+    top: 0;
+    height: 110vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+article {
+    position: relative;
+    padding: 0;
+    max-width: 20rem;
+    margin: 0 auto;
+}
+.step {
+    margin: 0 auto 2rem auto; /* which pne cpntrols the after margin */
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.607);
 }
 
 /* SF Voices for Gaza Section */
@@ -260,6 +237,8 @@ article {
     margin-right: 100px;
     padding: inherit; /* Inherit padding from .gaza-section */
 }
+
+/* The Scrolly Mural Alley Section */
 .sticky-thing-photo2 {
     position: -webkit-sticky;
     position: sticky;
@@ -278,7 +257,6 @@ article {
     align-items: center;
     justify-content: center;
   }
-
 .step1, .step2, .step3 {
     margin: 2rem auto;
     display: flex;
@@ -286,7 +264,6 @@ article {
     align-items: center;
     text-align: center;
 }
-
 .scroll-image2 {
     width: 90%; /* Increased image size */
     max-width: 1200px; /* Maximum width */
@@ -296,13 +273,13 @@ article {
     opacity: 1; /* Start with 0 opacity */
     transition: opacity 1s ease-in-out; /* Smooth fade transition */
 }
-
 .scroll-image {
     width: 60%;
     height: auto;
     display: block;
     margin: 0 auto;
   }
+
 /* Sanitized Expression Section */
 .sanitized-section {
     background-color: var(--p-green);
@@ -315,18 +292,6 @@ article {
     padding-top: 50px;
     clear: both;
 }
-/* .sanitized-title { /* NO LONGER NEEDED!
-    background-color: var(--p-blue);
-    display: inline-block;
-    padding: 15px 25px;
-    border-radius: 30px 0px 30px 30px;
-    max-width: 720px;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 25px;
-    flex-shrink: 1;
-} */
 .sanitized-text {
     max-width: 720px;
     margin-top: 50px;
@@ -364,84 +329,6 @@ article {
 }
 
 /* Body */
-.content-wrapper {
-    padding-top: 80vh; /* Space for video to be visible initially */
-    margin: 0;
-} 
-.image-container {
-margin: 30px 0;
-text-align: center;
-}
-.image-container img {
-    max-width: 100%;
-    height: 50vh;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Background Image Container */
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(images/MuralPics-14.jpg);
-    background-size: cover; /* Ensures it covers the whole viewport */
-    background-position: center;
-    background-attachment: fixed; /* This keeps it in place */
-    z-index: -2; /* Push it to the back */
-}
-
-/* Main Container */
-.parallax-images {
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    background-image: url(images/MuralPics-14.jpg);
-    padding-bottom: 100vh; /* Space for content section */
-}
-
-/* Scrolling Images Container */
-.scroll-image-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 150px;
-    padding: 100vh 20px 150px; /* First 100vh to show just background */
-}
-
-/* Image And Caption Container */
-.image-and-caption-v, 
-.image-and-caption-h {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px;
-    width: 100%;
-    opacity: 1;
-    transform: translateY(50px);
-    animation: fadeIn .5s forwards;
-    animation-play-state: paused;
-}
-
-/* Vertical Image Styling */
-.scroll-image-vertical {
-    width: 60%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Horizontal Image Styling */
-.scroll-image-horizontal {
-    width: 90%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 /* Caption Styling */
 cite {
@@ -471,6 +358,8 @@ cite {
     0% { opacity: 1; }
     100% { opacity: 0; }
 }
+
+/* Footer */
 .footer-section {
     width: 100%;
     overflow: hidden;
