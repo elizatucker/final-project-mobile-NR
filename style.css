@@ -192,8 +192,8 @@ article {
 }
 .step {
     margin: 2rem auto 0 auto; /* which pne cpntrols the after margin */
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.607);
+    background-color: var(--p-green);
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,7 +268,7 @@ article {
     text-align: center;
 }
 .scroll-image2 {
-    width: 90%; /* Increased image size */
+    width: 600px; /* Increased image size */
     max-width: 1200px; /* Maximum width */
     height: auto;
     border-radius: 10px;
