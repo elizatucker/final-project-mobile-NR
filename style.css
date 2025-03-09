@@ -13,11 +13,12 @@ body, html {
 
 /* Colors */
 :root {
-    --p-blue: #91A8CD;
-    --p-green: #053225;
-    --teal: #48A9A6;
-    --red: #A72608;
-    --beige: #C4A484;
+    --beige: #EBE3E3;
+    --dark-beige: #DBCBC3;
+    --burnt-orange: #E76F51;
+    --powder-blue: #95B8D1;
+    --sage: #4E6E5D;
+    --dark-brown: #5B4E4C;
 }
 
 /* Typography */
@@ -28,14 +29,14 @@ body, html {
     font-style: normal;
 }
 @font-face {
-    font-family: 'Roboto';
-    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    font-family: 'Graphik';
+    src: url('fonts/Graphik-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Roboto-Italic';
-    src: url('fonts/Roboto-Italic.ttf') format('truetype');
+    font-family: 'Graphik-Light';
+    src: url('fonts/Graphik-Light.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -43,35 +44,35 @@ h1 {
     font-size: 75px;
     font-family: Chalk;
     text-align: left;
-    color: var(--p-green)
+    color: var(--sage);
 }
 h2 {
     font-size: 30px;
     font-family: Chalk;
     text-align: left;
-    color: var(--p-green)
+    color: var(--sage);
 }
 h3 {
-    font-size: 24px;
-    font-family: Roboto;
+    font-size: 14px;
+    font-family: Graphik-Light;
     text-align: left;
-    color: var(--p-green)
+    color: var(--dark-brown);
 }
 h4 {
-    font-size: 60px;
+    font-size: 59px;
     font-family: Chalk;
     text-align: left;
     margin-bottom: 20px;
-    color: white;
+    color: var(--sage);
 }
 p {
     font-size: 18px;
-    font-family: Roboto;
+    font-family: Graphik;
     text-align: justify;
-    line-height: 1.5;
+    line-height: 1.75;
     margin-bottom: 25px;
     max-width: 700px;
-    color:#ffffff;
+    color: var(--dark-brown);
 }
 
 /* Video Header */
@@ -94,59 +95,76 @@ p {
 .headline-container {
     position: relative;
     background-color: white;
-    margin-top: -50px; /* Adjusts the position of the headline over video */
+    margin-top: -75px; /* Adjusts the position of the headline over video */
     margin-bottom: -80px; /* Adjuts the position of the first section */
-    margin-left: 100px;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 2;
-    width: 724px;
-    height: 150px;
+    max-width: 724px;
+    max-height: 150px;
     flex-shrink: 0;
     padding: 30px;
-    border-radius: 30px 30px 30px 0px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Lede Section */
 .lede-section {
-    background-color: var(--p-green);
+    background-color: var(--beige);
     display: flex;
     flex-direction: column;
     align-items: center; /* Keep only one align-items property */
     width: 100%;
     padding: 50px 20px 50px 20px; /* Added horizontal padding */
     clear: both;
+    overflow: visible;
+}
+.custom-hr {
+    border: none;
+    background-color: var(--dark-brown);
+    opacity: 60%;
+    max-width: 608px;
+    width: 75%;
+    height: 4px;
+    margin-top: 75px;
+}
+.byline-text {
+    position: relative;
+    font-size: 10px !important;
+    left: 0;
+    margin-top: 15px;
+    z-index: 10;
 }
 .lede-section img {
     width: 100%;
     max-width: 800px; /* Limit image width */
     height: auto;
     display: block;
-    margin: 0 auto; /* Center the image */
+    margin: auto ; /* Center the image */
+    margin-top: -20px;
 }
-
 .lede-text {
-    max-width: 720px;
-    margin: 80px auto 0; /* Center horizontally with auto margins */
-    text-align: center; /* Center the text */
+    max-width: 608px;
+    margin: 50px auto 0; /* Center horizontally with auto margins */
+    text-align: center;
     overflow: visible !important;
     flex-shrink: 1;
 }
 
 /* The Mission's Legacy Section */
 .mission-section {
-    background-color: var(--p-green);
+    background-color: var(--beige);
+    margin-top: -25px;
+    padding-bottom: 35px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     align-items: center;
     text-align: center;
     width: 100%;
-    padding-top: 25px;
     clear: both;
 }
 .mission-text {
-    max-width: 720px;
-    margin-top: 50px;
+    max-width: 608px;
     overflow: visible !important;
     flex-shrink: 1;
 }
@@ -161,7 +179,7 @@ p {
 /* Juana Alicia Scrolly section */
 #scrolly {
     position: relative;
-    background-color: var(p-green);
+    background-color: var(--beige);
     padding: 0;
 }
 .sticky-thing-photo1 {
@@ -183,14 +201,15 @@ p {
   }
 article {
     position: relative;
-    padding: 0;
-    max-width: 20rem;
+    padding-bottom: 50px;
+    max-width: 500px;
     margin: 0 auto;
 }
 .step {
-    margin: 2rem auto 0 auto; /* which pne cpntrols the after margin */
-    background-color: var(--p-green);
-    padding: 1rem;
+    margin-top: 50px;
+    background-color: var(--dark-beige);
+    padding: 25px;
+    padding-bottom: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,20 +217,19 @@ article {
 
 /* SF Voices for Gaza Section */
 .gaza-section-1 {
-    background-color: var(--p-green);
+    background-color: var(--beige);
     display: flex;
     align-items: flex-start;
     padding-top: 50px;
 }
 .gaza-title {
-    background-color: var(--p-green);
+    background-color: var(--beige);
     margin-left: 100px;
 }
 .gaza-section-2 {
-    background-color: var(--p-green);
+    background-color: var(--beige);
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-    grid-template-rows: auto auto; /* Two rows, auto-sized */
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
     padding-top: 10px;
     padding-bottom: 50px;
@@ -245,7 +263,7 @@ article {
     left: 0;
     width: 100%;
     margin: 0;
-    background-color: #053225;
+    background-color: var(--beige);
     background: url(images/MuralPics-14.jpg);
     background-size: cover;
     background-position: center center;
@@ -285,18 +303,19 @@ article {
 
 /* Sanitized Expression Section */
 .sanitized-section {
-    background-color: var(--p-green);
+    background-color: var(--beige);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     align-items: center;
     text-align: center;
     width: 100%;
-    padding-top: 50px;
+    padding-top: 25px;
+    padding-bottom: -25px !important;
     clear: both;
 }
 .sanitized-text {
-    max-width: 720px;
+    max-width: 608px;
     margin-top: 50px;
     overflow: visible !important;
     flex-shrink: 1;
@@ -304,17 +323,18 @@ article {
 
 /* Hands of Resistance Section */
 .resistance-section {
-    background-color: var(--p-green);
+    background-color: var(--beige);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     align-items: center;
     text-align: center;
+    padding-bottom: 50px;
     width: 100%;
     clear: both;
 }
 .resistance-title {
-    background-color: var(--p-blue);
+    background-color: var(--beige);
     display: inline-block;
     padding: 15px 25px;
     border-radius: 30px 30px 30px 0px;
@@ -325,25 +345,23 @@ article {
     flex-shrink: 1;
 }
 .resistance-text {
-    max-width: 720px;
+    max-width: 608px;
     margin-top: 50px;
     overflow: visible !important;
     flex-shrink: 1;
 }
 
-/* Body */
-
 /* Caption Styling */
 cite {
     margin-top: 10px;
-    font-style: italic;
-    color: #ffffff;
     text-align: center;
-    padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 3px;
-    max-width: 90%;
+    font-family: Graphik;
+    font-style: normal;
     font-size: 14px;
+    color: var(--dark-brown);
+    background-color: var(--dark-beige);
+    padding: 5px 10px;
+    max-width: 100%;
 }
 
 /* Fade-in Animation */
