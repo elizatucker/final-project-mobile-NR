@@ -518,13 +518,7 @@ article {
         max-width: 50%;
     }
     .footer-section .cite1 {
-        bottom: 50px; /* First citation near the middle */
-    }
-    .footer-section .cite2 {
-        bottom: 80px; /* Second citation a bit further down */
-    }
-    .footer-section .cite3 {
-        bottom: 45px; /*  Third citation a bit further down */
+        bottom: 45px; /* First citation near the middle */
     }
     .footer-section .cite4 {
         bottom: 10px; /* Fourth citation at the bottom */
