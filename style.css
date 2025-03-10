@@ -232,16 +232,35 @@ article {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     padding-top: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
     gap: 30px;
     row-gap: 5px;
 }
+.gaza-section-2 div {
+    display: flex;
+    flex-direction: column; /* Moves captions above images */
+    align-items: center !important;
+    text-align: center !important;
+}
 .gaza-section-2 img {
+    position: relative;
     max-width: 466px;
     width: auto;
     max-height: 502px;
     height: auto;
     flex-shrink: 1;
+    margin-left: 100px;
+}
+.gaza-section-2 cite {
+    margin-top: 10px;
+    text-align: center !important;
+    font-family: Graphik;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--dark-brown);
+    background-color: var(--dark-beige);
+    padding: 5px 10px;
+    max-width: 100%;
     margin-left: 100px;
 }
 .gaza-text {
@@ -300,6 +319,22 @@ article {
     opacity: 1; /* Start with 0 opacity */
     transition: opacity 1s ease-in-out; /* Smooth fade transition */
 }
+#scrolly cite {
+    font-family: Graphik;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--dark-brown);
+    background-color: var(--dark-beige);
+    padding: 5px 10px;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    width: 70%; /* Allow for more flexible width */
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; /* Center the caption */
+    box-sizing: border-box; /* Ensures padding doesn't reduce the effective width */
+}
 
 /* Sanitized Expression Section */
 .sanitized-section {
@@ -311,7 +346,7 @@ article {
     text-align: center;
     width: 100%;
     padding-top: 25px;
-    padding-bottom: -25px !important;
+    padding-bottom: -50px !important;
     clear: both;
 }
 .sanitized-text {
@@ -329,6 +364,7 @@ article {
     align-items: flex-start;
     align-items: center;
     text-align: center;
+    padding-top: -25px !important;
     padding-bottom: 50px;
     width: 100%;
     clear: both;
@@ -349,6 +385,44 @@ article {
     margin-top: 50px;
     overflow: visible !important;
     flex-shrink: 1;
+}
+
+/* Footer */
+.footer-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.footer-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.footer-section cite {
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    font-family: Graphik;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--dark-brown);
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 5px 10px;
+    max-width: 50%;
+}
+.footer-section .cite1 {
+    bottom: 134px; /* First citation near the middle */
+}
+.footer-section .cite2 {
+    bottom: 80px; /* Second citation a bit further down */
+}
+.footer-section .cite3 {
+    bottom: 45px; /*  Third citation a bit further down */
+}
+.footer-section .cite4 {
+    bottom: 10px; /* Fourth citation at the bottom */
 }
 
 /* Caption Styling */
@@ -378,17 +452,4 @@ cite {
 @keyframes fadeOut {
     0% { opacity: 1; }
     100% { opacity: 0; }
-}
-
-/* Footer */
-.footer-section {
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-.footer-section img {
-    width: 100%;
-    height: auto;
-    display: block;
 }
