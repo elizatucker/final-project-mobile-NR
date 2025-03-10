@@ -391,34 +391,25 @@ article {
         max-width: 50%;
     }
     .footer-section .cite1 {
-        bottom: 50px; /* First citation near the middle */
+        bottom: 60px; /* First citation near the middle */
     }
     .footer-section .cite4 {
         bottom: 10px; /* Fourth citation at the bottom */
     }
-    .gaza-section-1 {
+
+    .gaza-section-1, .gaza-section-2 {
         background-color: var(--beige);
-        display: flex;
-        align-items: flex-start;
-        padding-top: 50px;
-    }
-    .gaza-title {
-        background-color: var(--beige);
-        margin-left: 100px;
-    }
-    .gaza-section-2 {
-        background-color: var(--beige);
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 60px;
-        gap: 30px;
-        row-gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: -50px !important;
+    clear: both;
     }
     .gaza-section-2 div {
-        display: flex;
-        flex-direction: column; /* Moves captions above images */
         align-items: center !important;
         text-align: center !important;
     }
@@ -429,7 +420,6 @@ article {
         max-height: 502px;
         height: auto;
         flex-shrink: 1;
-        margin-left: 100px;
     }
     .gaza-section-2 cite {
         margin-top: 10px;
@@ -441,18 +431,12 @@ article {
         background-color: var(--dark-beige);
         padding: 5px 10px;
         max-width: 100%;
-        margin-left: 100px;
+        margin-bottom: 30px
     }
     .gaza-text {
-        display: flex;
-        flex-direction: column;
-        min-width: 510px;
-        width: auto;
-        max-height: 472px;
-        height: auto;
-        flex-shrink: 0;
-        margin-right: 100px;
-        padding: inherit; /* Inherit padding from .gaza-section */
+        max-width: 608px;
+        overflow: visible !important;
+        flex-shrink: 1;
     }
 }
 
@@ -551,7 +535,7 @@ article {
     padding-bottom: -50px !important;
     clear: both;
 }
-.sanitized-text {
+.gaza-text {
     max-width: 608px;
     margin-top: 50px;
     overflow: visible !important;
